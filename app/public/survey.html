@@ -6,173 +6,188 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Survey</title>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
 </head>
 <body>
+  <div class="container"> 
     <h1>Survey Questions</h1>
     <h3>About You</h3>
+
+    <div>
+
     <div class="row">
-            <div class="input-field col s12">
-              <input id="first_name" type="text" class="validate">
-              <label class="active" for="first_name">First Name</label>
-            </div>
+      <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Name (Required)</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value=" " id="example-text-input friend-name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Link to Photo Image (Required)</label>
+          <div class="col-10">
+            <input class="form-control" type="text" value=" " id="example-text-input friend-image">
           </div>
+        </div>
 
-          <div class="row">
-                <div class="input-field col s12">
-                  <input id="link" type="text" class="validate">
-                  <label class="active" for="link">Link to Image</label>
-                </div>
-              </div>
-    <div class="row">
-    <!-- Dropdown Trigger 1-->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+      </div>
 
-  <!-- Dropdown Structure 1-->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!"></a>two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-</div>
+      <h3>Question 1</h3>
+      <h4>On a hot summer day you will be outside</h4>
+      <select class="custom-select" id="one">
+          <option selected>Answer</option>
+          <option value="1">Heck yeah!</option>
+          <option value="2">There is a good chance</option>
+          <option value="3">Eh, maybe</option>
+          <option value="4">Doubt it</option>
+          <option value="5">NO WAY</option>
+        </select>
 
-<div class="row">
-   <!-- Dropdown Trigger 2-->
-   <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose One</a>
+        <h3>Question 2</h3>
+      <h4>You love going to work</h4>
+      <select class="custom-select" id="two">
+          <option selected>Answer</option>
+          <option value="1">Heck yeah!</option>
+          <option value="2">Most of the time</option>
+          <option value="3">Eh, maybe</option>
+          <option value="4">Not so much</option>
+          <option value="5">NO WAY</option>
+        </select>
 
-   <!-- Dropdown Structure 2-->
-   <ul id='dropdown2' class='dropdown-content'>
-     <li><a href="#!">one</a></li>
-     <li><a href="#!"></a>two</a></li>
-     <li class="divider" tabindex="-1"></li>
-     <li><a href="#!">three</a></li>
-     <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-     <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-   </ul>
-</div>
+        <h3>Question 3</h3>
+        <h4>If you have a dessert choice, it will always be ice cream</h4>
+        <select class="custom-select" id="three">
+            <option selected>Answer</option>
+            <option value="1">Heck yeah!</option>
+            <option value="2">There is a good chance</option>
+            <option value="3">Eh, maybe</option>
+            <option value="4">Doubt it</option>
+            <option value="5">NO WAY</option>
+          </select>
 
-<div class="row">
-    <!-- Dropdown Trigger 3-->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+        <h3>Question 4</h3>
+        <h4>Video games are awesome</h4>
+        <select class="custom-select" id="four">
+            <option selected>Answer</option>
+            <option value="1">YES!</option>
+            <option value="2">Most of the time</option>
+            <option value="3">Sometimes</option>
+            <option value="4">On a rare occasion</option>
+            <option value="5">NOPE</option>
+          </select>
 
-  <!-- Dropdown Structure 3-->
-  <ul id='dropdown3' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!"></a>two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-</div>
+        <h3>Question 5</h3>
+        <h4>Winter is the best season</h4>
+        <select class="custom-select" id="five">
+            <option selected>Answer</option>
+            <option value="1">YES!</option>
+            <option value="2">Sure, most of the time</option>
+            <option value="3">I like it for a month</option>
+            <option value="4">I like it for a week</option>
+            <option value="5">NOPE</option>
+          </select>
 
-  <div class="row">
-   <!-- Dropdown Trigger 4-->
-   <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+          <h3>Question 6</h3>
+          <h4>Winter is the best season</h4>
+          <select class="custom-select" id="six">
+              <option selected>Answer</option>
+              <option value="1">YES!</option>
+              <option value="2">Sure, most of the time</option>
+              <option value="3">I like it for a month</option>
+              <option value="4">I like it for a week</option>
+              <option value="5">NOPE</option>
+            </select>
 
-   <!-- Dropdown Structure 4-->
-   <ul id='dropdown4' class='dropdown-content'>
-     <li><a href="#!">one</a></li>
-     <li><a href="#!"></a>two</a></li>
-     <li class="divider" tabindex="-1"></li>
-     <li><a href="#!">three</a></li>
-     <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-     <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-   </ul>
-</div>
+            <h3>Question 7</h3>
+            <h4>I really love going to shows</h4>
+            <select class="custom-select" id="seven">
+                <option selected>Answer</option>
+                <option value="1">Always!</option>
+                <option value="2">Yeah, a couple a month</option>
+                <option value="3">Every now and again</option>
+                <option value="4">I'm good for a few a year</option>
+                <option value="5">I HATE CROWDS</option>
+              </select>
 
-   <div class="row">
-    <!-- Dropdown Trigger 5-->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+              <h3>Question 8</h3>
+              <h4>Craft breweries are amazing</h4>
+              <select class="custom-select" id="eight">
+                  <option selected>Answer</option>
+                  <option value="1">Heck yeah!</option>
+                  <option value="2">Most of the time</option>
+                  <option value="3">Sure, but where are the good bars?</option>
+                  <option value="4">Nah, totally overrated</option>
+                  <option value="5">I HATE BEER</option>
+                </select>
 
-  <!-- Dropdown Structure 5-->
-  <ul id='dropdown5' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!"></a>two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-</div>
+                <h3>Question 9</h3>
+                <h4>On a holiday from work you choose to stay home and relax</h4>
+                <select class="custom-select" id="nine">
+                    <option selected>Answer</option>
+                    <option value="1">Yesss! I love my couch!</option>
+                    <option value="2">Most of the time</option>
+                    <option value="3">Sometimes, but I like a fun activity too</option>
+                    <option value="4">On the very rare occasion</option>
+                    <option value="5">NO WAY. Holidays are for adventures.</option>
+                  </select>
 
-  <div class="row">
-    <!-- Dropdown Trigger 6-->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+                  <h3>Question 10</h3>
+                  <h4>A great vacation is spent at the beach</h4>
+                  <select class="custom-select" id="ten">
+                      <option selected>Answer</option>
+                      <option value="1">YEP!</option>
+                      <option value="2">Most of the time</option>
+                      <option value="3">Sometimes, but I like variety</option>
+                      <option value="4">On the very rare occasion</option>
+                      <option value="5">NO WAY. Beaches are boring.</option>
+                    </select>
 
-      <!-- Dropdown Structure 6-->
-      <ul id='dropdown6' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!"></a>two</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">three</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-      </ul>
+        <div class="row">
+          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your new friend is</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 id="friend-name"></h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="row">
-    <!-- Dropdown Trigger 7-->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+      </div>
 
-  <!-- Dropdown Structure 7-->
-  <ul id='dropdown7' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!"></a>two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-</div>
+      <script type="text/javascript">
+      $("#submit").on("click", function(event){
+        event.preventDefault();
+      })
 
-<div class="row">
-      <!-- Dropdown Trigger 8-->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
+      var friendFacts = {
+        name: $("#friend-name").val().trim(),
+        photo: $("#friend-image").val().trim(),
+        scores: [$("#one").val(), $("#two").val(), $("#three").val(), $("#four").val(), $("#five").val(), $("#six").val(), $("#seven").val(), $("#eight").val(), $("#nine").val(), $("#ten").val()]
+      }
+      $.post("/api/friends", friendFacts, function(data){
+        $("#friend-name").text(data.name);
+        $("#friend-image").attr("src", data.photo);
 
-      <!-- Dropdown Structure 8-->
-      <ul id='dropdown8' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!"></a>two</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">three</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-      </ul>
-    </div>
+        $("#myModal").modal("toggle");
+      });
 
-    <div class="row">
-    <!-- Dropdown Trigger 9-->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
-
-  <!-- Dropdown Structure 9-->
-  <ul id='dropdown9' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!"></a>two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-</div>
-
-<div class="row">
-      <!-- Dropdown Trigger 10-->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose One</a>
-
-      <!-- Dropdown Structure 10-->
-      <ul id='dropdown10' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!"></a>two</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">three</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-      </ul>
-    </div>
+      </script>
 </body>
 </html>

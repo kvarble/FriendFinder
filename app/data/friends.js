@@ -1,17 +1,68 @@
-var express = require("express");
-var bodyParser = require("body-parser");
 
-var app = express();
-
-var PORT = process.env.PORT || 8080;
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
-  });
-  
+  var friendArray = [
+  {
+  "name":"Elizabeth",
+  "photo":"http://placekitten.com/g/200/300",
+  "scores":[
+      5,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      1
+    ]
+},
+{
+  "name":"Jane",
+  "photo":"http://www.placepuppy.net/400/250",
+  "scores":[
+      3,
+      4,
+      5,
+      1,
+      3,
+      3,
+      1,
+      5,
+      4,
+      4
+    ]
+},
+{
+  "name":"Clifford",
+  "photo":"http://www.placepuppy.net/1p/400/250",
+  "scores":[
+      1,
+      2,
+      4,
+      1,
+      2,
+      5,
+      2,
+      1,
+      2,
+      4
+    ]
+},
+{
+  "name":"Mr. Darcy",
+  "photo":"http://placekitten.com/g/200/300",
+  "scores":[
+      3,
+      2,
+      5,
+      1,
+      3,
+      2,
+      1,
+      4,
+      5,
+      2
+    ]
+}
+  ];
+  module.exports = friendArray;
