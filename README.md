@@ -1,0 +1,1 @@
+Use this app to find some new friends. The following node modules are needed for this app: Express, Path, and BodyParser. Friend-Finder is also hosted on Heroku.
