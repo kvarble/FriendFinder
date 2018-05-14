@@ -1,5 +1,5 @@
 
-  var friendArray = [
+  var friends = [
   {
   "name":"Elizabeth",
   "photo":"http://placekitten.com/g/200/300",
@@ -65,4 +65,4 @@
     ]
 }
   ];
-  module.exports = friendArray;
+  module.exports = friends;

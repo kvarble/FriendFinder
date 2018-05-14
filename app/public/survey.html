@@ -7,6 +7,7 @@
     <title>Friend Survey</title>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
@@ -22,7 +23,7 @@
       <div class="form-group row">
         <label for="example-text-input" class="col-2 col-form-label">Name (Required)</label>
         <div class="col-10">
-          <input class="form-control" type="text" value=" " id="example-text-input friend-name">
+          <input class="form-control" type="text" id="friend-name">
         </div>
       </div>
 
@@ -30,7 +31,7 @@
         <div class="form-group row">
           <label for="example-text-input" class="col-2 col-form-label">Link to Photo Image (Required)</label>
           <div class="col-10">
-            <input class="form-control" type="text" value=" " id="example-text-input friend-image">
+            <input class="form-control" type="text" id="friend-image">
           </div>
         </div>
 
@@ -92,13 +93,13 @@
           </select>
 
           <h3>Question 6</h3>
-          <h4>Winter is the best season</h4>
+          <h4>Dancing is the best fun.</h4>
           <select class="custom-select" id="six">
               <option selected>Answer</option>
               <option value="1">YES!</option>
-              <option value="2">Sure, most of the time</option>
-              <option value="3">I like it for a month</option>
-              <option value="4">I like it for a week</option>
+              <option value="2">Sure, if I've had enough to drink</option>
+              <option value="3">Every now and again</option>
+              <option value="4">Only in my car</option>
               <option value="5">NOPE</option>
             </select>
 
@@ -161,7 +162,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <h3 id="friend-name"></h3>
+          <h3 id="best-friend-name"></h3>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -173,22 +174,26 @@
       </div>
 
       <script type="text/javascript">
+      $(document).ready(function(){
       $("#submit").on("click", function(event){
         event.preventDefault();
-      })
-
-      var friendFacts = {
-        name: $("#friend-name").val().trim(),
-        photo: $("#friend-image").val().trim(),
+        
+      
+        console.log($("#friend-name"));
+      var userData = {
+        name: $("#friend-name").val(),
+        photo: $("#friend-image").val(),
         scores: [$("#one").val(), $("#two").val(), $("#three").val(), $("#four").val(), $("#five").val(), $("#six").val(), $("#seven").val(), $("#eight").val(), $("#nine").val(), $("#ten").val()]
-      }
-      $.post("/api/friends", friendFacts, function(data){
-        $("#friend-name").text(data.name);
-        $("#friend-image").attr("src", data.photo);
+      };
+
+      $.post("/api/friends", userData, function(data){
+        $("#best-friend-name").text(data.name);
+        $("#best-friend-photo").attr("src", data.photo);
 
         $("#myModal").modal("toggle");
       });
-
+    })
+      })
       </script>
 </body>
 </html>
